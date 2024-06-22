@@ -1,2 +1,2 @@
 # Netflix-Project
-<img alt="Static Badge" src="https://img.shields.io/badge/just project-pink">
+[![Netflix](https://img.shields.io/badge/Netflix-E50914?style=flat&logo=netflix&logoColor=white)](https://www.netflix.com)
