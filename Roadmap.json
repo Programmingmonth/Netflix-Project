@@ -1,0 +1,8 @@
+{
+	"DESCRIPTION": "This file is for planning",
+	"Netflix Project For Programming Flutter"
+	"NEEDS": [
+		"Connect to database",
+		"Designer for project",
+	]
+}
