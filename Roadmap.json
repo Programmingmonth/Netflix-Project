@@ -5,7 +5,7 @@
 		"Connect to database",
 		"Designer for project",
 	],
-	"Databases" : [
+	"DATABASE" : [
 		"The database can be anything you want",
 	]
 }
