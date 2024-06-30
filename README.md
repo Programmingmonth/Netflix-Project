@@ -3,9 +3,10 @@
 	#shieldsimg{
 		text-align: center;
 	}
+	
+	<img id="shieldsimg" src="https://img.shields.io/badge/just%20the%20message-8A2BE2"></img>
 </style>
 
-<img id="shieldsimg" src="https://img.shields.io/badge/just%20the%20message-8A2BE2"></img>
 
 [![Netflix](https://img.shields.io/badge/Netflix-E50914?style=flat&logo=netflix&logoColor=white)](https://www.netflix.com)
 <br>
