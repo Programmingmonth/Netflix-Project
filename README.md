@@ -1,7 +1,7 @@
 # Netflix Project
 
 <img id="shieldsimg" src="https://img.shields.io/badge/Updating%20the%20project-8A2BE2"></img>
-Updating the project
+
 [![Netflix](https://img.shields.io/badge/Netflix-E50914?style=flat&logo=netflix&logoColor=white)](https://www.netflix.com)
 <br>
 
