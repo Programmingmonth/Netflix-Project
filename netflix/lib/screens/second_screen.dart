@@ -77,10 +77,7 @@ class SecondScreen extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {
-                    PageController controller = PageView.of(context)!;
-                    controller.animateToPage(0, duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
-                  },
+                  onPressed: () {},
                   child: Text('GET STARTED'),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,
