@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "title": "Example Movie",
+    "description": "This is an example movie description.",
+    "image": "assets/images/example_movie.jpg"
+  }
+]
