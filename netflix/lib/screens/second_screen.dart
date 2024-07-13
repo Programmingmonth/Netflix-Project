@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SecondScreen extends StatelessWidget {
+  final Function(int) onNavigate;
+
+  SecondScreen({required this.onNavigate});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +81,9 @@ class SecondScreen extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    onNavigate(0);
+                  },
                   child: Text('GET STARTED'),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,

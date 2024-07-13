@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
-class SecondScreen extends StatelessWidget {
+class WelcomeScreen extends StatelessWidget {
+  final Function(int) onNavigate;
+
+  WelcomeScreen({required this.onNavigate});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -30,95 +35,64 @@ class SecondScreen extends StatelessWidget {
               ),
             ),
             Spacer(),
-            Container(
-              height: 200,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
+            Center(
+              child: Column(
                 children: <Widget>[
-                  _buildMovieCard('assets/images/movie1.png'),
-                  _buildMovieCard('assets/images/movie2.png'),
-                  _buildMovieCard('assets/images/movie3.png'),
+                  Text(
+                    'Unlimited films,\nTV programmes\n& more',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 8),
+                  Text(
+                    'Watch anywhere. Cancel at any time.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 16,
+                    ),
+                  ),
                 ],
               ),
-            ),
-            Icon(Icons.download, color: Colors.white, size: 40),
-            SizedBox(height: 16),
-            Text(
-              'Download and watch offline',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 8),
-            Text(
-              'Always have something to watch offline.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 16,
-              ),
-            ),
-            SizedBox(height: 16), // Add spacing between text and dots
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Icon(Icons.circle, size: 10, color: Colors.grey),
-                Icon(Icons.circle, size: 10, color: Colors.white),
-                Icon(Icons.circle, size: 10, color: Colors.grey),
-                Icon(Icons.circle, size: 10, color: Colors.grey),
-              ],
             ),
             Spacer(),
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Container(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-                    PageController controller = PageView.of(context)!;
-                    controller.animateToPage(0, duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
-                  },
-                  child: Text('GET STARTED'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red,
-                    padding: EdgeInsets.symmetric(vertical: 16),
-                    textStyle: TextStyle(fontSize: 16),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.circle, size: 10, color: Colors.white),
+                      Icon(Icons.circle, size: 10, color: Colors.grey),
+                      Icon(Icons.circle, size: 10, color: Colors.grey),
+                      Icon(Icons.circle, size: 10, color: Colors.grey),
+                    ],
                   ),
-                ),
+                  SizedBox(height: 16), // Add spacing between dots and button
+                  Container(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        onNavigate(1);
+                      },
+                      child: Text('GET STARTED'),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        padding: EdgeInsets.symmetric(vertical: 16),
+                        textStyle: TextStyle(fontSize: 16),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 16),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildMovieCard(String imagePath) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 8),
-      width: 120,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        image: DecorationImage(
-          image: AssetImage(imagePath),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Align(
-        alignment: Alignment.bottomCenter,
-        child: Container(
-          margin: EdgeInsets.all(8),
-          width: 40,
-          height: 40,
-          decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.7),
-            shape: BoxShape.circle,
-          ),
-          child: Icon(Icons.play_arrow, color: Colors.white),
         ),
       ),
     );

@@ -13,10 +13,6 @@ class NetflixCloneApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Netflix Clone',
       home: MainPage(),
-      routes: {
-        '/welcome': (context) => WelcomeScreen(),
-        '/second': (context) => SecondScreen(),
-      },
     );
   }
 }
@@ -29,14 +25,22 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   PageController _pageController = PageController();
 
+  void _navigateToPage(int pageIndex) {
+    _pageController.animateToPage(
+      pageIndex,
+      duration: Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
         controller: _pageController,
         children: <Widget>[
-          WelcomeScreen(),
-          SecondScreen(),
+          WelcomeScreen(onNavigate: _navigateToPage),
+          SecondScreen(onNavigate: _navigateToPage),
         ],
       ),
     );
