@@ -23,3 +23,6 @@ flutter:
   assets:
     - assets/images/netflix_logo.png
     - assets/data/sample_data.json
+    # - assets/images/movie1.png
+    # - assets/images/movie2.png
+    # - assets/images/movie3.png
