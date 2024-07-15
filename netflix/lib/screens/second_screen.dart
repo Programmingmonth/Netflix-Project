@@ -39,9 +39,9 @@ class SecondScreen extends StatelessWidget {
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  _buildMovieCard('assets/images/movie1.png'),
-                  _buildMovieCard('assets/images/movie2.png'),
-                  _buildMovieCard('assets/images/movie3.png'),
+                  _buildMovieCard('assets/images/LittleBabyBumsGoBuster.jpg'),
+                  _buildMovieCard('assets/images/Extraction.jpg'),
+                  _buildMovieCard('assets/images/BossBaby.jpg'),
                 ],
               ),
             ),
