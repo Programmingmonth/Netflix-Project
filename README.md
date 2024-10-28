@@ -1,8 +1,18 @@
 # Netflix Project
 
-<img id="shieldsimg" src="https://img.shields.io/badge/Updating%20the%20project-8A2BE2"></img>
-![GitHub Workflow Status](https://img.shields.io/badge/GITHUB-Updating_the_project-007ACC?logo=github&logoColor=white)
-[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)](https://flutter.dev/)
+<img
+    id="shieldsimg"
+    alt="Updating the project"
+    src="https://img.shields.io/badge/Updating%20the%20project-8A2BE2?style=for-the-badge"
+/>
+<img
+    alt="GitHub Workflow Status"
+    src="https://img.shields.io/badge/GITHUB-Updating_the_project-007ACC?style=for-the-badge&logo=github&logoColor=white"
+/>
+<img
+    alt="Flutter"
+    src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"
+/>
 
 This Is Project For Flutter.
 
